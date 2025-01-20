@@ -1,0 +1,120 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+      {
+          "type": "Feature",
+          "properties": {
+              "provinsi": "Kalimantan Barat",
+              "populasi": 5623328,
+              "lulusan_s1": 850000,
+              "luas_km2": 147037.04,
+              "persentase_penduduk_miskin": 6.32,
+              "PDRB_2023": 274469
+          },
+          "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                  [
+                      [108.5, -0.5],
+                      [109, -1],
+                      [110, -1],
+                      [110, 0],
+                      [108.5, -0.5]
+                  ]
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "provinsi": "Kalimantan Tengah",
+              "populasi": 2538000,
+              "lulusan_s1": 540000,
+              "luas_km2": 153443.91,
+              "persentase_penduduk_miskin": 5.26,
+              "PDRB_2023": 208846
+          },
+          "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                  [
+                      [113, -1],
+                      [114, -2],
+                      [115, -2],
+                      [114, -1],
+                      [113, -1]
+                  ]
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "provinsi": "Kalimantan Selatan",
+              "populasi": 4062000,
+              "lulusan_s1": 630000,
+              "luas_km2": 37135.05,
+              "persentase_penduduk_miskin": 4.02,
+              "PDRB_2023": 269297
+          },
+          "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                  [
+                      [114.5, -2.5],
+                      [115, -3],
+                      [116, -3],
+                      [115, -2.5],
+                      [114.5, -2.5]
+                  ]
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "provinsi": "Kalimantan Timur",
+              "populasi": 3533000,
+              "lulusan_s1": 950000,
+              "luas_km2": 126981.28,
+              "persentase_penduduk_miskin": 5.51,
+              "PDRB_2023": 843571
+          },
+          "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                  [
+                      [116.5, -1],
+                      [117, -2],
+                      [118, -2],
+                      [117, -1],
+                      [116.5, -1]
+                  ]
+              ]
+          }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+              "provinsi": "Kalimantan Utara",
+              "populasi": 738163,
+              "lulusan_s1": 120000,
+              "luas_km2": 70101.18,
+              "persentase_penduduk_miskin": 5.38,
+              "PDRB_2023": 147279
+          },
+          "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                  [
+                      [116, 3],
+                      [117, 2.5],
+                      [118, 2.5],
+                      [117, 3],
+                      [116, 3]
+                  ]
+              ]
+          }
+      }
+  ]
+}
