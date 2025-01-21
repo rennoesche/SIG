@@ -66,8 +66,4 @@
 </script>
 
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> eef40f5 (merge)
