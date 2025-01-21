@@ -32,7 +32,7 @@ php artisan migrate
 php artisan app:import-provinsi
 ```
 ```
-php artisan app:import-geojson
+php artisan app:import-kabkota
 ```
 ```
 php artisan app:import-data
