@@ -38,18 +38,18 @@
 <body>
     <div class="navbar flex items-center justify-between px-4 py-2">
         <div id="selectedValue" class="text-gray-700 ">
-            <b>Peta Nama Provinsi</b>
+            <b>Peta Pulau Kalimantan</b>
         </div>
         <button id="hamburgerBtn" class="w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg flex justify-center items-center hover:bg-blue-600" onclick="meow()">
             ☰
         </button>
         <div id="dropdownMenu" class="hidden bg-white shadow-md rounded-lg w-48 absolute top-16 right-4">
             <ul class="py-2">
-                <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-value="nama">Peta Nama Provinsi</a></li>
-                <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-value="gdp">Peta GDP Pulau Kalimantan</a></li>
-                <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-value="penduduk_miskin">Persentase Kemiskinan di Pulau Kalimantan</a></li>
-                <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-value="pendidikan_s1">Peta Lulusan S1 Pulau Kalimantan</a></li>
-                <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-value="population">Peta Populasi</a></li>
+                <li><div class="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer" data-value="nama">Peta kepadatan penduduk</div></li>
+                <li><div  class="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer" data-value="gdp">GDP Pulau Kalimantan</div></li>
+                <li><div  class="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer" data-value="penduduk_miskin">Persentase Kemiskinan di Pulau Kalimantan</div></li>
+                <li><div  class="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer" data-value="pendidikan_s1">Peta Lulusan S1 Pulau Kalimantan</div></li>
+                <li><div  class="block px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer" data-value="population">Peta Populasi</div></li>
             </ul>
         </div>
     </div>
@@ -66,18 +66,28 @@
         }
     };
 
-    document.querySelectorAll('#dropdownMenu a').forEach(function(item) {
-        item.addEventListener('click', function(event) {
+    document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('#dropdownMenu div').forEach(function (item) {
+        item.addEventListener('click', function (event) {
             event.preventDefault();
-            var value = this.getAttribute('data-value');
-            var text = this.textContent;
-            document.getElementById('selectedValue').innerHTML = '<b>' + text + '</b>';
-            updateMap(value);
-            // Hide the dropdown menu after selection
-            document.getElementById('dropdownMenu').classList.remove('visible');
-            document.getElementById('dropdownMenu').classList.add('hidden');
+
+            selectedValue = this.getAttribute('data-value'); 
+            const text = this.textContent;
+
+            const selectedValueElement = document.getElementById('selectedValue');
+            selectedValueElement.innerHTML = `<b>${text}</b>`;
+            selectedValueElement.setAttribute('data-value', selectedValue);
+
+            updateMap(selectedValue);
+            map.removeControl(legend);
+            legend.addTo(map);
+
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            dropdownMenu.classList.remove('visible');
+            dropdownMenu.classList.add('hidden');
         });
     });
+});
    </script>
 </body>
 </html>
