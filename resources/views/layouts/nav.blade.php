@@ -22,12 +22,12 @@
             </li>
             <li class="relative parent">
                 <!-- Parent Menu Item -->
-                <a href="" class="flex justify-between md:inline-flex p-4 items-center hover:bg-gray-50 space-x-2">
+                <div class="flex justify-between md:inline-flex p-4 items-center hover:bg-gray-50 space-x-2 cursor-pointer">
                     <span>Peta</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-2 h-2 fill-current" viewBox="0 0 24 24">
                         <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"></path>
                     </svg>
-                </a>
+                <div>
                 <!-- Dropdown Menu -->
                 <ul class="child transition duration-300 md:absolute top-full right-0 md:w-48 bg-white md:shadow-lg md:rounded-b">
                     <li>

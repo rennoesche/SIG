@@ -18,7 +18,7 @@
         @vite(['resources/css/app.css','resources/js/app.js'])
         <style>
             #map {
-                height: 100vh;
+                height: calc(100vh - 64px);
             }
         @media only screen and (min-width: 768px) {
             .parent:hover .child {
